@@ -453,9 +453,7 @@ public class InfernalMobsCore {
             return classesAllowedMap.get(entName);
         }
 
-        config.load();
         boolean result = config.get("permittedentities", entName, true).getBoolean(true);
-        config.save();
         classesAllowedMap.put(entName, result);
 
         return result;
@@ -467,9 +465,7 @@ public class InfernalMobsCore {
             return classesForcedMap.get(entName);
         }
 
-        config.load();
         boolean result = config.get("entitiesalwaysinfernal", entName, false).getBoolean(false);
-        config.save();
         classesForcedMap.put(entName, result);
 
         return result;
